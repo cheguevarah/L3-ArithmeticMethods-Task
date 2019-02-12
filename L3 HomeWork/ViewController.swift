@@ -19,9 +19,9 @@
             //        squareAndСube(num1: 3)
             //        allNumsFromTo(countTill: 5)
             //        absoluteNum(numToFind: 10)
-            //        balanceInBank(depo: 24, percent: 0.06, start: 1826, end: 2019)
+//                    balanceInBank(depo: 24, percent: 0.06, start: 1826, end: 2019)
             //        studentsMoney(income: 700, outcome: 1000, inflation: 0.03, time: 10)
-            //        studentToSurvive(savings: 2400, income: 700, outcome: 1000, inflation: 0.03)
+                    studentToSurvive(savings: 2400, income: 700, outcome: 1000, inflation: 0.03)
             //        flipOfNumber(numToFlip: 23)
             
             
@@ -85,9 +85,9 @@
             var summWithProc: Double = depo
             var totalSumm: Double = 0
             for i in start...end {
-                summWithProc += depo * percent
+                summWithProc += summWithProc * percent
                 totalSumm += summWithProc
-                print("За год \(i) выйдет сумма: \(summWithProc)")
+                print("За год \(i) выйдет сумма: \(Float(summWithProc))")
             }
             print("Всего накапало бы \(Int(totalSumm)) $")
             
@@ -117,7 +117,7 @@
             var totalMoney = savings + income
             var totalSpend = outcome
             var time : Double = 0
-            while (totalMoney - totalSpend) > 0 {
+            while (totalMoney - totalSpend) >= 0 {
                 totalSpend += outcome * inflation
                 totalMoney += income - totalSpend
                 time += 1
