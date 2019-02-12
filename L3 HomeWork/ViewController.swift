@@ -19,10 +19,10 @@
             //        squareAndСube(num1: 3)
             //        allNumsFromTo(countTill: 5)
             //        absoluteNum(numToFind: 10)
-//                    balanceInBank(depo: 24, percent: 0.06, start: 1826, end: 2019)
+                    balanceInBank(depo: 24, percent: 0.06, start: 1827, end: 2019)
             //        studentsMoney(income: 700, outcome: 1000, inflation: 0.03, time: 10)
-                    studentToSurvive(savings: 2400, income: 700, outcome: 1000, inflation: 0.03)
-            //        flipOfNumber(numToFlip: 23)
+//                    studentToSurvive(savings: 2400, income: 700, outcome: 1000, inflation: 0.03)
+//                    flipOfNumber(numToFlip: 521)
             
             
             
@@ -86,7 +86,7 @@
             var totalSumm: Double = 0
             for i in start...end {
                 summWithProc += summWithProc * percent
-                totalSumm += summWithProc
+                totalSumm = summWithProc
                 print("За год \(i) выйдет сумма: \(Float(summWithProc))")
             }
             print("Всего накапало бы \(Int(totalSumm)) $")
@@ -133,10 +133,16 @@
             var flippedNumber = 0
             var firstNum = 0
             var lastNum = 0
-            if normalNumber > 0 {
+            if normalNumber > 0 && normalNumber < 100 {
                 firstNum = (normalNumber%10) * 10
                 lastNum = (normalNumber - (normalNumber%10))/10
                 flippedNumber = firstNum + lastNum
+            } else {
+                if normalNumber >= 100 && normalNumber < 1000 {
+                    firstNum = (normalNumber%10) * 100
+                    lastNum = (normalNumber - (normalNumber%20))/10
+                    flippedNumber = firstNum + lastNum
+                }
             }
             print("Зеркальный переворот числа \(numToFlip) будет \(flippedNumber)")
             
