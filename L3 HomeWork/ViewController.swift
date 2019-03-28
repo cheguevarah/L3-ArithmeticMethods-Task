@@ -15,21 +15,21 @@
             // Do any additional setup after loading the view, typically from a nib.
             
             
-            //        maxFromTwo(num1: 123, num2: 999)
-            //        squareAndСube(num1: 3)
-            //        allNumsFromTo(countTill: 5)
-            //        absoluteNum(numToFind: 10)
+                    maxFromTwo(num1: 123, num2: 999)
+                    squareAndСube(num1: 3)
+                    allNumsFromTo(countTill: 5)
+                    absoluteNum(numToFind: 10)
                     balanceInBank(depo: 24, percent: 0.06, start: 1827, end: 2019)
-            //        studentsMoney(income: 700, outcome: 1000, inflation: 0.03, time: 10)
-//                    studentToSurvive(savings: 2400, income: 700, outcome: 1000, inflation: 0.03)
-//                    flipOfNumber(numToFlip: 521)
+                    studentsMoney(income: 700, outcome: 1000, inflation: 0.03, time: 10)
+                    studentToSurvive(savings: 2400, income: 700, outcome: 1000, inflation: 0.03)
+                    flipOfNumber(numToFlip: 521)
             
             
             
         }
         
         
-        //    Большее из двух чисел
+        //    Вывести на экран наибольшее из двух чисел
         
         func maxFromTwo(num1: Int, num2: Int) ->Int {
             if num1 > num2 {
@@ -40,7 +40,7 @@
         }
         
         
-        // куб и квадрат числа
+        // Вывести на экран квадрат и куб числа
         
         func squareAndСube (num1: Int) {
             let squareOfNum = num1 * num1
@@ -50,7 +50,7 @@
         }
         
         
-        // числа от и до
+        // Вывести на экран все числа до заданного и в обратном порядке до 0
         
         func allNumsFromTo (countTill: Int) {
             for i in 0...countTill {
@@ -79,7 +79,7 @@
         }
         
         
-        // Проценты в банке
+        // Остров Манхэттен был приобретен поселенцами за $24 в 1826 г. Каково было бы в настоящее время состояние их счета, если бы эти 24 доллара были помещены тогда в банк под 6% годового дохода?
         
         func balanceInBank (depo: Double, percent: Double, start: Int, end: Int) {
             var summWithProc: Double = depo
@@ -94,7 +94,7 @@
         }
         
         
-        //Cтуденту чтоб прожить на степуху
+        //Ежемесячная стипендия студента составляет 700 гривен, а расходы на проживание превышают ее и составляют 1000 грн. в месяц. Рост цен ежемесячно увеличивает расходы на 3%. Определить, какую нужно иметь сумму денег, чтобы прожить учебный год (10 месяцев), используя только эти деньги и стипендию.
         
         func studentsMoney (income: Double, outcome: Double, inflation: Double, time: Int) {
             var totalOutcome: Double = 0
@@ -111,7 +111,7 @@
         }
         
         
-        // Студенту прожить с накоплениями
+        // У студента имеются накопления 2400 грн. Ежемесячная стипендия составляет 700 гривен, а расходы на проживание превышают ее и составляют 1000 грн. в месяц. Рост цен ежемесячно увеличивает расходы на 3%. Определить, сколько месяцев сможет прожить студент, используя только накопления и стипендию.
         
         func studentToSurvive (savings: Double, income: Double, outcome: Double, inflation: Double ) {
             var totalMoney = savings + income
@@ -126,7 +126,7 @@
         }
         
         
-        //  Перевернуть число
+        //  2хзначную цело численную переменную типа 25, 41, 12. После выполнения вашей программы у вас в другой переменной должно лежать это же число только задом на перед 52, 14, 21 
         
         func flipOfNumber (numToFlip: Int) {
             var normalNumber = numToFlip
